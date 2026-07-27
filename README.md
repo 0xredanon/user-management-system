@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Security](https://img.shields.io/badge/Security-Enterprise%20Grade-green)]()
 [![Architecture](https://img.shields.io/badge/Architecture-MVC%20%2B%20Singleton-orange)]()
-[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/yourusername/user-management-system/pulls)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/0xredanon/user-management-system/pulls)
 
 ---
 
@@ -189,7 +189,7 @@ user-management-system/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/user-management-system.git
+   git clone https://github.com/0xredanon/user-management-system.git
    cd user-management-system
    ```
 
@@ -418,4 +418,15 @@ Built as a portfolio project to demonstrate full-stack PHP development skills, w
 
 If you find this project helpful, please give it a star on GitHub!
 
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/user-management-system?style=social)](https://github.com/yourusername/user-management-system/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/0xredanon/user-management-system?style=social)](https://github.com/0xredanon/user-management-system/stargazers)
+
+## Screenshots
+
+### Login Page
+![Login Page](screenshots/login.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Admin Panel
+![Admin Panel](screenshots/admin-panel.png)
