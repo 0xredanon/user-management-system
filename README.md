@@ -423,10 +423,10 @@ If you find this project helpful, please give it a star on GitHub!
 ## Screenshots
 
 ### Login Page
-![Login Page](screenshots/login.png)
+![Login Page](screenshots/Login)
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/Dashboard.png)
 
 ### Admin Panel
-![Admin Panel](screenshots/admin-panel.png)
+![Admin Panel](screenshots/Admin-Panel.png)
