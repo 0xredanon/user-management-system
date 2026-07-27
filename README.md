@@ -423,7 +423,7 @@ If you find this project helpful, please give it a star on GitHub!
 ## Screenshots
 
 ### Login Page
-![Login Page](screenshots/Login)
+![Login Page](screenshots/Login.png)
 
 ### Dashboard
 ![Dashboard](screenshots/Dashboard.png)
