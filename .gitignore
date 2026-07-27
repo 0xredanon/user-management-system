@@ -1,0 +1,91 @@
+# ─────────────────────────────────────────────────────────────
+#  .gitignore — User Management System
+#  Comprehensive ignore rules for a PHP/MySQL project
+# ─────────────────────────────────────────────────────────────
+
+# ─── Environment / Configuration ───────────────────────────────
+# Never commit real environment configuration (contains DB credentials)
+configs/env.php
+.env
+.env.*
+!configs/env.example.php
+
+# Local PHP configuration (Windows-specific paths, dev settings)
+php.ini
+
+# ─── Dependencies ────────────────────────────────────────────
+vendor/
+node_modules/
+composer.lock
+
+# ─── Runtime Data ────────────────────────────────────────────
+# User uploads (avatars, documents) — never commit user data
+uploads/
+uploads/profiles/
+
+# Application logs — may contain sensitive information
+logs/
+logs/*.log
+logs/errors.log
+
+# Storage / cache / rate-limit data
+storage/
+storage/runtime/
+storage/rate_limits/
+storage/cache/
+storage/sessions/
+
+# ─── OS & Editor Files ───────────────────────────────────────
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+
+# ─── Build / Archive ─────────────────────────────────────────
+*.zip
+*.tar.gz
+*.tar
+*.gz
+*.rar
+*.7z
+
+# ─── Database ────────────────────────────────────────────────
+# Local database dumps (keep only the schema file)
+*.sql
+!database.sql
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+
+# ─── Temporary Files ─────────────────────────────────────────
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.log
+
+# ─── PHPUnit / Testing ───────────────────────────────────────
+.phpunit.result.cache
+.phpunit/
+coverage/

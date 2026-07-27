@@ -1,0 +1,304 @@
+/* ==========================================
+   PROFILE PAGE
+========================================== */
+
+.profile-page{
+    animation:fadeUp .35s ease;
+}
+
+.profile-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:2rem;
+}
+
+.profile-header h1{
+    margin:0;
+    font-size:2rem;
+    color:var(--text);
+}
+
+.profile-header .subtitle{
+    margin-top:.35rem;
+    color:var(--text-muted);
+    font-size:.95rem;
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.profile-grid{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:24px;
+    align-items:start;
+}
+
+/* ==========================================
+   LEFT CARD
+========================================== */
+
+.profile-card{
+
+    text-align:center;
+}
+
+.profile-avatar{
+
+    width:110px;
+    height:110px;
+
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        145deg,
+        var(--amber),
+        var(--amber-bright)
+    );
+
+    color:#241a0e;
+
+    font-size:42px;
+    font-weight:700;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    box-shadow:
+        0 0 30px rgba(232,166,89,.25);
+}
+
+.profile-card h2{
+
+    margin-bottom:12px;
+}
+
+/* ==========================================
+   ROLE
+========================================== */
+
+.role-badge{
+
+    display:inline-block;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+}
+
+.role-admin{
+
+    background:rgba(232,166,89,.18);
+
+    color:var(--amber);
+}
+
+.role-user{
+
+    background:rgba(70,180,120,.18);
+
+    color:#6fd96f;
+}
+
+/* ==========================================
+   INFO
+========================================== */
+
+.profile-meta{
+
+    margin-top:28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+}
+
+.profile-meta div{
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    padding:14px;
+}
+
+.profile-meta span{
+
+    display:block;
+
+    color:var(--text-muted);
+
+    font-size:.82rem;
+
+    margin-bottom:6px;
+}
+
+.profile-meta strong{
+
+    font-size:1rem;
+
+    color:var(--text);
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+.profile-form-card h2{
+
+    margin-bottom:24px;
+}
+
+.profile-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+.profile-form .field{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+}
+
+.profile-form label{
+
+    color:var(--text-muted);
+
+    font-size:.9rem;
+
+    font-weight:500;
+}
+
+.profile-form input{
+
+    width:100%;
+
+    padding:13px 16px;
+
+    border-radius:10px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid var(--border);
+
+    color:var(--text);
+
+    transition:.25s;
+}
+
+.profile-form input::placeholder{
+
+    color:#7e7467;
+}
+
+.profile-form input:focus{
+
+    outline:none;
+
+    border-color:var(--amber);
+
+    box-shadow:
+        0 0 0 4px rgba(232,166,89,.12);
+}
+
+.profile-form hr{
+
+    border:none;
+
+    border-top:1px solid var(--border);
+
+    margin:8px 0;
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.profile-form button{
+
+    margin-top:10px;
+
+    width:100%;
+}
+
+/* ==========================================
+   CARD EFFECT
+========================================== */
+
+.profile-card,
+.profile-form-card{
+
+    transition:
+        transform .25s,
+        box-shadow .25s;
+}
+
+.profile-card:hover,
+.profile-form-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.35);
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:950px){
+
+    .profile-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .profile-card{
+
+        order:1;
+    }
+
+    .profile-form-card{
+
+        order:2;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .profile-header{
+
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    .profile-avatar{
+
+        width:90px;
+        height:90px;
+        font-size:34px;
+    }
+
+}

@@ -1,0 +1,262 @@
+/* =========================================================
+   USERS PAGE
+========================================================= */
+
+.users-page{
+    width:100%;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.users-page .users-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:1rem;
+    margin-bottom:2rem;
+    flex-wrap:wrap;
+}
+
+.users-page h1{
+    margin:0;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.users-page .users-table-container{
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-radius:16px;
+    overflow-x:auto;
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+.users-page .users-table{
+    width:100%;
+    min-width:760px;
+    border-collapse:collapse;
+}
+
+.users-page .users-table thead{
+    background:rgba(232,166,89,.08);
+}
+
+.users-page .users-table th{
+    padding:16px;
+    text-align:right;
+    color:var(--amber);
+    font-weight:600;
+    white-space:nowrap;
+}
+
+.users-page .users-table td{
+    padding:15px 16px;
+    border-top:1px solid var(--border);
+    vertical-align:middle;
+    word-break:break-word;
+}
+
+.users-page .users-table tbody tr{
+    transition:background .25s, transform .25s;
+}
+
+.users-page .users-table tbody tr:hover{
+    background:rgba(232,166,89,.06);
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.users-page .users-empty{
+    text-align:center;
+    padding:3rem;
+    color:var(--text-muted);
+}
+
+/* =========================================================
+   ROLE
+========================================================= */
+
+.users-page .role-badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:72px;
+    padding:6px 12px;
+    border-radius:999px;
+    font-size:.82rem;
+    font-weight:600;
+}
+
+.users-page .role-admin{
+    background:rgba(232,166,89,.16);
+    color:var(--amber);
+}
+
+.users-page .role-user{
+    background:rgba(59,178,115,.16);
+    color:#67d88d;
+}
+
+.users-page .role-super_admin{
+    background:rgba(79,172,253,.16);
+    color:#4facfd;
+}
+
+/* =========================================================
+   STATUS BADGES
+========================================================= */
+
+.users-page .status-active{
+    background:rgba(59,178,115,.16);
+    color:#3bb273;
+}
+
+.users-page .status-inactive{
+    background:rgba(214,91,91,.16);
+    color:#d65b5b;
+}
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.users-page .action-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:8px 14px;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:.85rem;
+    font-weight:600;
+    transition:background .25s, transform .25s, box-shadow .25s;
+}
+
+.users-page .action-btn:not(:last-child){
+    margin-left:.5rem;
+}
+
+.users-page .btn-edit{
+    background:var(--amber);
+    color:#241a0e;
+}
+
+.users-page .btn-edit:hover{
+    background:var(--amber-bright);
+    transform:translateY(-2px);
+}
+
+.users-page .btn-delete{
+    background:var(--error);
+    color:#fff;
+}
+
+.users-page .btn-delete:hover{
+    filter:brightness(1.08);
+    transform:translateY(-2px);
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.users-page .user-form{
+    max-width:560px;
+    margin:auto;
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:2rem;
+    backdrop-filter:blur(16px);
+}
+
+.users-page .user-form .field{
+    margin-bottom:1.4rem;
+}
+
+.users-page .user-form label{
+    display:block;
+    margin-bottom:.45rem;
+    color:var(--text-muted);
+    font-size:.9rem;
+    font-weight:500;
+}
+
+.users-page .user-form input,
+.users-page .user-form select{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    background:rgba(255,255,255,.05);
+    color:var(--text);
+    font-size:.95rem;
+    transition:border-color .25s, box-shadow .25s, background .25s;
+}
+
+.users-page .user-form input:focus,
+.users-page .user-form select:focus{
+    outline:none;
+    border-color:var(--amber);
+    box-shadow:0 0 0 3px rgba(232,166,89,.18);
+}
+
+.users-page .user-form button{
+    width:100%;
+    margin-top:1rem;
+}
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.users-page .search-bar{
+    display:flex;
+    gap:12px;
+    margin-bottom:1.5rem;
+    flex-wrap:wrap;
+}
+
+.users-page .search-bar input{
+    flex:1;
+    min-width:260px;
+    padding:12px 14px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    background:rgba(255,255,255,.05);
+    color:var(--text);
+}
+
+.users-page .search-bar input:focus{
+    outline:none;
+    border-color:var(--amber);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width:768px){
+    .users-page .users-header{
+        flex-direction:column;
+        align-items:stretch;
+    }
+    .users-page .users-header .btn{
+        width:100%;
+    }
+    .users-page .action-btn{
+        width:100%;
+        margin:.3rem 0;
+    }
+    .users-page .user-form{
+        padding:1.4rem;
+    }
+}

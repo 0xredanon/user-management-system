@@ -1,0 +1,80 @@
+# ─── Security Headers ───────────────────────────────────────
+<IfModule mod_headers.c>
+    # Prevent clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # Prevent MIME-type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+
+    # XSS Protection
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Permissions Policy
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+    # Prevent indexing
+    Header always set X-Robots-Tag "noindex, nofollow"
+
+    # HSTS (only over HTTPS)
+    <If "%{HTTPS} == 'on'"
+        Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    </If>
+</If>
+
+# ─── Block Access to Sensitive Files ────────────────────────
+<FilesMatch "\.(env|sql|log|ini|conf|sh|bak|swp|tmp)$">
+    Require all denied
+</FilesMatch>
+
+# Block access to the configs directory
+<IfModule mod_authz_core.c>
+    <FilesMatch "^configs\.(env|sql|log|ini|conf|sh)$">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+
+# Block access to database files
+<FilesMatch "\.(db|sqlite|sqlite3)$">
+    Require all denied
+</FilesMatch>
+
+# Block access to hidden files (except .htaccess)
+<FilesMatch "^\.(?!htaccess)">
+    Require all denied
+</FilesMatch>
+
+# Block access to storage directory
+<Directory "storage">
+    Require all denied
+</Directory>
+
+# Block access to logs directory
+<Directory "logs">
+    Require all denied
+</Directory>
+
+# ─── Disable Directory Listing ──────────────────────────────
+Options -Indexes
+
+# ─── PHP Security Settings ──────────────────────────────────
+<IfModule mod_php7.c>
+    php_flag expose_php Off
+    php_value display_errors Off
+    php_value log_errors On
+    php_value upload_max_filesize 2M
+    php_value post_max_size 8M
+    php_value max_execution_time 30
+    php_value max_input_vars 3000
+</If>
+<IfModule mod_php8.c>
+    php_flag expose_php Off
+    php_value display_errors Off
+    php_value log_errors On
+    php_value upload_max_filesize 2M
+    php_value post_max_size 8M
+    php_value max_execution_time 30
+    php_value max_input_vars 3000
+</If>
